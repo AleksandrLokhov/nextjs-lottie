@@ -1,0 +1,7 @@
+.imageWrapper {
+  filter: grayscale(95%);
+}
+
+.imageWrapper.active {
+  filter: none;
+}
