@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { IPlayerProps, Player } from '@lottiefiles/react-lottie-player';
 import { AnimationItem } from 'lottie-web';
 import styles from './lottie-player.module.scss';
@@ -13,6 +13,7 @@ interface ControlledLottiePlayerProps extends Partial<IPlayerProps> {
 export const ControlledLottiePlayer = (props: ControlledLottiePlayerProps) => {
   const { size = 70 } = { ...props };
   const animationRef = useRef<AnimationItem | null>(null);
+  const { activeIndex, index, handleChangeActive, ...restProps } = props;
 
   const handlePlay = () => {
     props.handleChangeActive(props.index);
@@ -27,6 +28,7 @@ export const ControlledLottiePlayer = (props: ControlledLottiePlayerProps) => {
         animationRef.current.stop();
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.activeIndex]);
 
   return (
@@ -44,7 +46,7 @@ export const ControlledLottiePlayer = (props: ControlledLottiePlayerProps) => {
             animationRef.current = instance;
           }}
           src={props.src ?? ''}
-          {...props}
+          {...restProps}
         />
       </div>
     </div>
