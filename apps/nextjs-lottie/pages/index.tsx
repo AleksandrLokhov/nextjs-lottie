@@ -32,6 +32,12 @@ export function Index() {
             </h1>
           </div>
           <div className={styles.appWrapper}>
+            <div className={styles.wrapperRow}>
+              <LottiePlayer src={'/ovk_bookmark.json'} />
+              <LottiePlayer src={'/ovk_bookmark.json'} size={88} />
+              <LottiePlayer src={'/ovk_bookmark.json'} size={176} />
+              <LottiePlayer src={'/ovk_bookmark.json'} size={264} />
+            </div>
             <h1 style={{ fontSize: '24px', fontWeight: 700, paddingBlock: 24 }}>
               Lottie Animation on hover
             </h1>
