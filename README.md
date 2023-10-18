@@ -1,6 +1,6 @@
 ## Start the app
 
-To start the development server run `nx serve nextjs-lottie`. Open your browser and navigate to http://localhost:4200/. Happy coding!
+To start the development server run `nx serve nextjs-lottie`. Open your browser and navigate to http://localhost:4201/. Happy coding!
 
 # NextjsLottie
 
